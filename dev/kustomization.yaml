@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+  - name: product
+    files:
+      - package.json=product/product.env
+  - name: payment
+    files:
+      - .env=payment/payment.env
+  - name: cart
+    env: cart/cart.env
+generatorOptions:
+  disableNameSuffixHash: true

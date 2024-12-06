@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  NAME: cart
+kind: ConfigMap
+metadata:
+  name: cart
+---
+apiVersion: v1
+data:
+  .env: User=ggss2233
+kind: ConfigMap
+metadata:
+  name: payment
+---
+apiVersion: v1
+data:
+  package.json: |-
+    name=showprodect
+    list=50
+kind: ConfigMap
+metadata:
+  name: product
